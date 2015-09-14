@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "valid-jsdoc": [2, {
+      "requireReturn": false,
+      "requireReturnDescription": false
+    }],
+    "quote-props": [1, "as-needed"],
+    "quotes": 0,
+    "no-use-before-define": 1,
+    "no-loop-func": 0
+  },
+  "env": {
+    "browser": true,
+    "amd": true
+  }
+}

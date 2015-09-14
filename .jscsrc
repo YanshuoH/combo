@@ -1,0 +1,20 @@
+{
+  "preset": "google",
+  "validateIndentation": 4,
+  "validateQuoteMarks": null,
+  "maximumLineLength": 160,
+  "jsDoc": {
+    "requireParamDescription": true,
+    "requireNewlineAfterDescription": true,
+    "checkTypes": true,
+    "checkParamNames": true,
+    "requireParamTypes": true,
+    "checkRedundantParams": true,
+    "checkReturnTypes": true,
+    "checkRedundantReturns": true,
+    "requireReturnTypes": true,
+    "checkAnnotations": "jsdoc3"
+  },
+  "maxErrors": 500,
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties"
+}
