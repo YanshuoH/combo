@@ -3,8 +3,23 @@ define(['chai', 'Combo'], function(chai, Combo) {
 
     var expect = chai.expect;
 
+    // Create testing DOM divs
+    var elem1 = document.createElement('div');
+    elem1.id = 'testBlock';
+    elem1.style.visibility = 'hidden';
+    elem1.innerHTML = 'Testing block';
+    document.body.appendChild(elem1);
+
+    var elem2 = document.createElement("div");
+    elem2.id = "comboBlock";
+    elem2.style.visibility = 'hidden';
+    elem2.innerHTML = 'Testing combo block';
+    document.body.appendChild(elem2);
+
     var testBlockContainer = document.getElementById('testBlock');
     var comboBlockContainer = document.getElementById('comboBlock');
+    console.log(testBlockContainer);
+    console.log(comboBlockContainer);
     var combo = null;
 
     /**
