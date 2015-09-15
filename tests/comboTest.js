@@ -18,8 +18,7 @@ define(['chai', 'Combo'], function(chai, Combo) {
 
     var testBlockContainer = document.getElementById('testBlock');
     var comboBlockContainer = document.getElementById('comboBlock');
-    console.log(testBlockContainer);
-    console.log(comboBlockContainer);
+
     var combo = null;
 
     /**
