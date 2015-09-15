@@ -23,7 +23,7 @@ require.config({
   callback: window.__karma__.start,
 
   paths: {
-    'chai': '../node_modules/chai/chai'
+    chai: '../node_modules/chai/chai'
   }
 
 });
