@@ -30,6 +30,7 @@
     "grunt-eslint": "^17.1.0",
     "grunt-jscs": "^2.1.0",
     "grunt-karma": "^0.12.1",
+    "grunt-karma-coveralls": "^2.5.4",
     "jscs": "^2.1.1",
     "karma": "^0.13.9",
     "karma-chai": "^0.1.0",

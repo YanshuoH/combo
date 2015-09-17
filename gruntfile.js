@@ -22,10 +22,19 @@ module.exports = function(grunt) {
             all: {
                 configFile: 'karma.conf.js'
             }
+        },
+        coveralls: {
+            options: {
+                debug: true,
+                coverageDir: 'reports/coverage/report-lcov',
+                dryRun: false,
+                force: true,
+                recursive: true
+            }
         }
     });
 
     grunt.registerTask('test', ['karma']);
     grunt.registerTask('coding-rules', ['jscs', 'eslint']);
-    grunt.registerTask('default', ['coding-rules', 'test']);
+    grunt.registerTask('default', ['coding-rules', 'test', 'coveralls']);
 };
