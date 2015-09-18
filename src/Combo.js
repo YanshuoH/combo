@@ -8,9 +8,10 @@ define(function() {
      * @param {Function} finalCallback Callback function when combination is completed
      * @param {Number} maxDelay Max delay between two keydown
      * @param {Function} perCallback Callback function when one key in combination is pressed
+     * @param {Function} failureCallback Callback function max delay exceed
      * @constructor
      */
-    function Combo(combination, finalCallback, maxDelay, perCallback) {
+    function Combo(combination, finalCallback, maxDelay, perCallback, failureCallback) {
         /**
          * Max delay between two keydown (in second)
          *
@@ -40,14 +41,14 @@ define(function() {
          * @param {Event} event Event of listener
          */
         function comboListener(event) {
-            event.preventDefault();
             clearTimeout(resetTimeout);
 
             // If the key pressed in combination array
             if (event.keyCode === combination[nextExpectedKeyIndex]) {
+                event.preventDefault();
                 // Per-action callback
                 if (perCallback !== undefined) {
-                    perCallback();
+                    perCallback(nextExpectedKeyIndex);
                 }
 
                 // Matched condition
@@ -56,16 +57,14 @@ define(function() {
                 } else {
                     // continue
                     nextExpectedKeyIndex += 1;
-                    resetTimeout = setTimeout(reset, maxDelay * 1000);
+                    resetTimeout = setTimeout(function() {
+                        nextExpectedKeyIndex = 0;
+                        if (failureCallback !== undefined) {
+                            failureCallback();
+                        }
+                    }, maxDelay * 1000);
                 }
             }
-        }
-
-        /**
-         * Reset key index
-         */
-        function reset() {
-            nextExpectedKeyIndex = 0;
         }
 
         /**
