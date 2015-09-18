@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" id="comboButtons">
             <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-expand-less" id="firstButton"></a>
             <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-expand-more" id="secondButton"></a>
             <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-chevron-left" id="thirdButton"></a>
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="col-md-12">
-        <div class="smell-face">
+        <div class="smell-face hidden" id="smallFace">
             <img src="demo/Nirvana-Smiley-Face.jpeg" alt="Smell face">
         </div>
     </div>
@@ -70,7 +70,8 @@
 <script>
     require.config({
         paths: {
-            Combo: '../src/Combo'
+            Combo: '../src/Combo',
+            jquery: 'https://code.jquery.com/jquery-1.11.3.min'
         }
     });
     $.material.init();
