@@ -31,10 +31,20 @@ module.exports = function(grunt) {
                 force: true,
                 recursive: true
             }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: 'src',
+                    name: 'Combo',
+                    out: 'dist/Combo.js'
+                }
+            }
         }
     });
 
     grunt.registerTask('test', ['karma']);
     grunt.registerTask('coding-rules', ['jscs', 'eslint']);
+    grunt.registerTask('build', ['requirejs']);
     grunt.registerTask('default', ['coding-rules', 'test', 'coveralls']);
 };
