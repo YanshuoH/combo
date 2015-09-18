@@ -1,1 +1,0 @@
-define("Combo",[],function(){"use strict";function e(e,t,n,r){function o(o){o.preventDefault(),clearTimeout(s),o.keyCode===e[i]&&(r!==undefined&&r(),i===e.length-1?t():(i+=1,s=setTimeout(u,n*1e3)))}function u(){i=0}n|=1;var i=0,s;document.addEventListener("keydown",o,!1),this.removeComboListener=function(){document.removeEventListener("keydown",o,!1)}}return e});
