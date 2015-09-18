@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta description="Combo: a frontend combo key listener, supports both RequireJS and Standard JS">
+    <meta author="Yanshuo HUANG">
+    <title>Combo: a frontend combo key listener</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
+    <style>
+        .adapter {
+            height: 168px;
+        }
+        .combo-btn {
+            margin: 3px !important;
+        }
+        .smell-face {
+            padding-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<a href="https://github.com/YanshuoH/combo" style="position: absolute; top: 0; left: 0; border: 0; z-index: 10;">
+    <img src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<div class="header-panel shadow-z-2 adapter">
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <h1>Combo</h1>
+                    <p class="lead">A frontend combo key listener</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="demo">
+                <div class="page-header">
+                    <h2>Demo</h2>
+                    <p class="lead">It's your turn. Press arrow keys.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-expand-less" id="firstButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-expand-more" id="secondButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-chevron-left" id="thirdButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-chevron-right" id="fourthButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-expand-less" id="fifthButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-expand-more" id="sixthButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-chevron-left" id="seventhButton"></a>
+            <a class="combo-btn btn btn-default btn-fab btn-raised mdi-navigation-chevron-right" id="eighthButton"></a>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="smell-face">
+            <img src="demo/Nirvana-Smiley-Face.jpeg" alt="Smell face">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js" data-main="demo/demo.js"></script>
+<script>
+    require.config({
+        paths: {
+            Combo: '../src/Combo'
+        }
+    });
+    $.material.init();
+</script>
+</body>
+</html>
