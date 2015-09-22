@@ -169,6 +169,37 @@ define(['chai', 'Combo'], function(chai, Combo) {
                     done();
                 }, 1500);
             });
+
+            it('should call the failure callback if defined, which turns the block visible', function(done) {
+                expect(isComboBlockVisible()).to.be.false;
+                var perCallback = function() {
+                    // Nothing happens here
+                    return;
+                };
+                var failureCallback = function() {
+                    showComboBlock();
+                };
+                combo = new Combo(
+                    fixtureCombinations.multipleKeyCombination,
+                    showComboBlock,
+                    0.05,
+                    perCallback,
+                    failureCallback
+                );
+
+                keydown(keymap.up);
+                setTimeout(function() {
+                    keydown(keymap.down);
+                }, 10);
+                setTimeout(function() {
+                    keydown(keymap.left);
+                }, 20);
+
+                setTimeout(function() {
+                    expect(isComboBlockVisible()).to.be.true;
+                    done();
+                }, 1500);
+            });
         });
 
         describe('Combo with other key binding', function() {

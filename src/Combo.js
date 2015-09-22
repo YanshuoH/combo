@@ -57,12 +57,13 @@ define(function() {
                 } else {
                     // continue
                     nextExpectedKeyIndex += 1;
-                    resetTimeout = setTimeout(function() {
+
+                    resetTimeout = setTimeout(function(args1) {
                         nextExpectedKeyIndex = 0;
-                        if (failureCallback !== undefined) {
-                            failureCallback();
+                        if (args1 !== undefined) {
+                            args1();
                         }
-                    }, maxDelay * 1000);
+                    }, maxDelay * 1000, failureCallback);
                 }
             }
         }
