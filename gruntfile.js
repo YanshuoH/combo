@@ -32,8 +32,8 @@ module.exports = function(grunt) {
                 recursive: true
             }
         },
-        requirejs: {
-            compile: {
+        uglify: {
+            combo: {
                 options: {
                     baseUrl: 'src',
                     name: 'Combo',
@@ -45,6 +45,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test', ['karma']);
     grunt.registerTask('coding-rules', ['jscs', 'eslint']);
-    grunt.registerTask('build', ['requirejs']);
+    grunt.registerTask('build', ['uglify']);
     grunt.registerTask('default', ['coding-rules', 'test', 'coveralls']);
 };
