@@ -34,10 +34,8 @@ module.exports = function(grunt) {
         },
         uglify: {
             combo: {
-                options: {
-                    baseUrl: 'src',
-                    name: 'Combo',
-                    out: 'dist/Combo.js'
+                files: {
+                    'dist/Combo.min.js': ['src/Combo.js']
                 }
             }
         }
