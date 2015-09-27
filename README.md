@@ -4,6 +4,8 @@ Frontend combo-key listener
 [![Build Status](https://travis-ci.org/YanshuoH/combo.svg?branch=master)](https://travis-ci.org/YanshuoH/combo)
 [![Coverage Status](https://coveralls.io/repos/YanshuoH/combo/badge.svg?branch=master&service=github)](https://coveralls.io/github/YanshuoH/combo?branch=master)
 
+# Demo: http://yanshuoh.github.io/combo/
+
 # Usage
 * Download
   * npm
@@ -74,6 +76,8 @@ Function to be called for every key presses in comboChain
 
 ## comboFailureCallback
 Function to be called when a failure occured. Generally you exceed the max delay.
+
+### You can find the complet usage in the demo code. [demo/demo.js](https://github.com/YanshuoH/combo/blob/master/demo/demo.js)
 
 # Test
 * Assuming **karma** **grunt** is installed
