@@ -6,7 +6,14 @@ Frontend combo-key listener
 
 # Usage
 * Download
-TODO (npm and bower) publish
+  * npm
+  ```
+    npm install combo-keys
+  ```
+  * bower
+  ```
+    bower install combo
+  ```
 
 * Simply include the javascript file
 ```
